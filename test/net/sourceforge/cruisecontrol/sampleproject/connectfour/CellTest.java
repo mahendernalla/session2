@@ -9,7 +9,7 @@
  * modification, are permitted provided that the following conditions
  * are met:
  *
- *     + Redistributions of source code must retain the above copyright
+ *   raju unava  + Redistributions of source  code must retain the above copyright
  *       notice, this list of conditions and the following disclaimer.
  *
  *     + Redistributions in binary form must reproduce the above
@@ -36,26 +36,13 @@
  ********************************************************************************/
 package net.sourceforge.cruisecontrol.sampleproject.connectfour;
 
-/**
- * Generic class that used by the Playing Stand to represent a cell in the stand.
- */
-public class Cell {
+import junit.framework.TestCase;
 
-	
-    private final int column;
-    private final int row;
+public class CellTest extends TestCase {
 
-    public Cell(int column, int row) {
-        this.row = row;
-        this.column = column;
+    public void testConstructor() {
+        Cell newCell = new Cell(10, 5);
+        assertEquals(10, newCell.getColumn());
+        assertEquals(5, newCell.getRow());
     }
-
-    public int getColumn() {
-        return column;
-    }
-
-    public int getRow() {
-        return row;
-    }
-
 }
